@@ -1,0 +1,15 @@
+[submodule "cryptoping-watch"]
+	path = cryptoping-watch
+	url = git@gitlab.com:ozmeum/cryptoping-watch.git
+[submodule "cryptoping-notify"]
+	path = cryptoping-notify
+	url = git@gitlab.com:ozmeum/cryptoping-notify.git
+[submodule "cryptoping-api"]
+	path = cryptoping-api
+	url = git@gitlab.com:ozmeum/cryptoping-api.git
+[submodule "cryptoping-web"]
+	path = cryptoping-web
+	url = git@gitlab.com:ozmeum/cryptoping-web.git
+[submodule "cryptoping-mobile"]
+	path = cryptoping-mobile
+	url = git@gitlab.com:ozmeum/cryptoping-mobile.git
