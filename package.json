@@ -1,0 +1,24 @@
+{
+  "name": "cryptoping",
+  "version": "0.1.0",
+  "description": "Cryptocurrency Address Watch Service",
+  "scripts": {
+    "dev-web": "",
+    "dev-mobile": "",
+    "--": "",
+    "production-deploy-services": "",
+    "production-deploy-web": "",
+    "--NOT INTENDED TO BE RUN INDIVIDUALLY--": "",
+    "clean": "",
+    "build-services": "",
+    "build-web": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/ozmeum/cryptoping.git"
+  },
+  "author": "CryptoPing LLC",
+  "license": "PRIVATE",
+  "private": true,
+  "homepage": "https://cryptoping.com/"
+}
