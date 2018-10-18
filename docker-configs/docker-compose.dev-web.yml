@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  web:
+    image: cryptoping/cryptoping-web
+    build: ../cryptoping-web
+    ports:
+      - 8080:80
+    command: nginx -g 'daemon off;'
+    volumes:
+      - ../cryptoping-web/dist:/dist
+      - ../cryptoping-web/conf:/ect/nginx/conf.d

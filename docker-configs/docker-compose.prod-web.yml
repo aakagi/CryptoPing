@@ -1,0 +1,9 @@
+version: '2'
+
+services:
+  web:
+    image: cryptoping/cryptoping-web
+    fip: 209.177.88.197
+    ports:
+      - 80:80
+    size: s1
