@@ -11,7 +11,7 @@
     "--NOT INTENDED TO BE RUN INDIVIDUALLY--": "",
     "clean": "",
     "build-web": "cd ./cryptoping-web && npm run build && cd ..",
-    "hyper-clean-web": "hyper compose down -p cryptoping-web && hyper rmi cryptoping/cryptoping-web",
+    "hyper-clean-web": "cd ./docker-configs && hyper compose down -p cryptoping && cd .. && hyper rmi cryptoping/cryptoping-web",
     "build-services": ""
   },
   "repository": {
