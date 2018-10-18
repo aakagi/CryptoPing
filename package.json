@@ -6,12 +6,12 @@
     "dev-web": "concurrently --kill-others 'cd ./cryptoping-web && npm run dev' 'docker-compose -f ./docker-configs/docker-compose.dev-web.yml up --build --force-recreate --remove-orphans'",
     "dev-mobile": "",
     "--": "",
-    "production-deploy-web": "npm run build && npm run hyper-clean-web && hyper compose up -f ./docker-configs/docker-compose.prod-web.yml -d --force-recreate",
+    "production-deploy-web": "npm run build-web && npm run hyper-clean-web && hyper compose up -f ./docker-configs/docker-compose.prod-web.yml -d --force-recreate",
     "production-deploy-services": "",
     "--NOT INTENDED TO BE RUN INDIVIDUALLY--": "",
     "clean": "",
     "build-web": "cd ./cryptoping-web && npm run build && cd ..",
-    "hyper-clean-web": "hyper compose down -p ozmeum-web && hyper rmi ozmeum/ozmeum-web",
+    "hyper-clean-web": "hyper compose down -p cryptoping-web && hyper rmi cryptoping/cryptoping-web",
     "build-services": ""
   },
   "repository": {
