@@ -4,15 +4,17 @@
   "description": "Cryptocurrency Address Watch Service",
   "scripts": {
     "dev-web": "concurrently --kill-others 'cd ./cryptoping-web && npm run dev' 'docker-compose -f ./docker-configs/docker-compose.dev-web.yml up --build --force-recreate --remove-orphans'",
+    "dev-services": "npm run clean-services && concurrently --kill-others 'cd ./cryptoping-api && npm run dev' 'docker-compose -f ./docker-configs/docker-compose.dev-services.yml up --build --force-recreate --remove-orphans'",
     "dev-mobile": "",
     "--": "",
     "production-deploy-web": "npm run build-web && npm run hyper-clean-web && hyper compose up -f ./docker-configs/docker-compose.prod-web.yml -d --force-recreate",
     "production-deploy-services": "",
     "--NOT INTENDED TO BE RUN INDIVIDUALLY--": "",
-    "clean": "",
+    "clean-web": "cd ./cryptoping-web && npm run clean && cd ..",
     "build-web": "cd ./cryptoping-web && npm run build && cd ..",
-    "hyper-clean-web": "cd ./docker-configs && hyper compose down -p cryptoping && cd .. && hyper rmi cryptoping/cryptoping-web",
-    "build-services": ""
+    "clean-services": "cd ./cryptoping-api && npm run clean && cd ..",
+    "build-services": "",
+    "hyper-clean-web": "cd ./docker-configs && hyper compose down -p cryptoping && cd .. && hyper rmi cryptoping/cryptoping-web"
   },
   "repository": {
     "type": "git",

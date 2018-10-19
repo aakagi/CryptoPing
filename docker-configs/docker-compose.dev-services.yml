@@ -1,0 +1,37 @@
+version: '2'
+
+services:
+  api:
+    image: cryptoping/cryptoping-api
+    build: ../cryptoping-api
+    restart: always
+    # links:
+    #   - db
+    volumes:
+      - ../cryptoping-api/src:/api/src
+    env_file:
+      - ../cryptoping-api/env/dev.env
+    ports:
+      - 4000:80
+    command: npm run dev
+  # db:
+  #   container_name: db
+  #   image: cryptoping/cryptoping-db
+  #   build: ../cryptoping-db
+  #   volumes:
+  #     - cryptoping-db:/var/lib/postgresql/data
+  #   env_file:
+  #     - ../cryptoping-db/env/dev.env
+  #   command: postgres -c 'config_file=/usr/local/share/postgresql/postgresql.conf'
+  # db-admin:
+  #   image: dpage/pgadmin4
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: dev
+  #     PGADMIN_DEFAULT_PASSWORD: dev
+  #   links:
+  #     - db
+  #   ports:
+  #     - 81:80
+
+# volumes:
+#   cryptoping-db:

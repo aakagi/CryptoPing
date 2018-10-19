@@ -13,3 +13,6 @@
 [submodule "cryptoping-mobile"]
 	path = cryptoping-mobile
 	url = git@gitlab.com:cryptoping/cryptoping-mobile.git
+[submodule "cryptoping-db"]
+	path = cryptoping-db
+	url = git@gitlab.com:cryptoping/cryptoping-db.git
